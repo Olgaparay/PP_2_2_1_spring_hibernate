@@ -1,7 +1,7 @@
 package hiber.model;
 import javax.persistence.*;
 @Entity
-@Table(name = "cars")
+@Table(name = "car")
 public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -10,14 +10,11 @@ public class Car {
     private String model;
     @Column(name = "series")
     private int series;
-    @Column(mappedBy = "car")
-    private User user;
 
     public Car(){
 
     }
-
-    public Car(String model, int series) {
+    public Car(String model, int series){
         this.model = model;
         this.series = series;
     }
@@ -46,11 +43,4 @@ public class Car {
         this.series = series;
     }
 
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
 }
