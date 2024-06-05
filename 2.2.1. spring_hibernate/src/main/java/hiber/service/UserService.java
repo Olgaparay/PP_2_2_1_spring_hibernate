@@ -10,4 +10,7 @@ public interface UserService {
     List<User> listUsers();
 
     List<User> getUserCarModelAndCarSeries(String model, int series);
+
+    @Transactional
+    void createUsersAndCars();
 }
