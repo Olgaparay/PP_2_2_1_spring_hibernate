@@ -10,8 +10,6 @@ public class Car {
     private String model;
     @Column(name = "series")
     private int series;
-    @OneToOne(mappedBy = "car")
-    private User user;
 
     public Car(){
 
@@ -45,11 +43,4 @@ public class Car {
         this.series = series;
     }
 
-    @Override
-    public String toString() {
-        return "Car{" +
-                ", model='" + model + '\'' +
-                ", series=" + series +
-                '}';
-    }
 }
